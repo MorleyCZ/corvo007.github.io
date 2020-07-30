@@ -2,6 +2,7 @@
 
 <head>
     <title>小仓唯使用手册</title>
+    <link rel="shortcut icon" href="https://ftp.bmp.ovh/imgs/2020/07/a02e724300f43d03.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" Content="机器人功能指令说明">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
@@ -23,28 +24,34 @@
         .footnote {
             color: red;
         }
-    
     </style>
 </head>
 
 <body class="markdown-body">
     <h1>小仓唯使用手册</h1>
+    <p><i><b>使用本服务即代表您同意<a href="https://xcw.pcrbotlink.top/EULA.html">最终用户使用许可协议</a>。</b></i></p>
     <p><b>快速查阅:</b><br>
         <a href="#1">如何报刀？</a><br><a href="#2">如何登陆管理界面？</a><br><a href="#3">如何进行各项查询？</a><br><a href="#4">如何抽卡？</a></p>
     <h2>前言</h2>
-    <p>欢迎您使用小仓唯bot！接下来，本手册将详细介绍本bot的各项功能。<b>若您是初次使用，推荐先查看上方的"快速查阅"栏目。您也可以使用Ctrl+F快速在页面中查找。对于手机，请使用"页面内查找"。</b>如有疑惑，请询问维护组。</p>
+    <p>欢迎您使用小仓唯bot！接下来，本手册将详细介绍本bot的各项功能。<b>若您是初次使用，推荐先查看上方的"快速查阅"栏目。您也可以使用Ctrl+F快速在页面中查找。对于手机，请使用"页面内查找"。</b>如有疑惑，请询问维护组。
+    </p>
     <h3>指令标记说明：</h3>
     <p><b>(at)</b>标记代表该命令需要at机器人</p>
     <p><b>(管理员/维护组)</b>标记表示功能需要管理员或维护组权限 </p>
     <p><b>(自动)</b>标记启用后无需手动触发，会自动推送或执行 </p>
     <p>方括号表示参数可以省略</p>
     <p>命令中间的"+"无需输入</p>
+    <p><b>如无特殊说明，所有功能仅群聊可用。</b></p>
     <h3>本群服务启禁用说明：</h3>
-    <p>在群聊中发送"lssv -a"以查看所有服务，其中服务名称前带|○|表示该服务已启用，带|×|表示服务已禁用。发送"禁用/启用 服务名"以禁用/启用某个服务<sup class="footnote">1</sup></p>
+    <p>在群聊中发送"lssv -a"<b>(请注意此处有空格)</b>以查看所有服务，其中服务名称前带|○|表示该服务已启用，带|×|表示服务已禁用。发送"禁用/启用 服务名"<b>(请注意此处也有空格，如：禁用 gacha)</b>以禁用/启用某个服务<sup class="footnote">1</sup></p>
     <p><sup class="footnote">1</sup>注：本指令要求管理员以上权限</p>
     <h2>会战核心功能</h2>
+    <h3>box统计&存轴器</h3>
+    <h4></h4>
+    <p>box统计：发送"帮助pcrbox统计"查看帮助
+    <br>存轴器：发送"帮助pcr轴"查看帮助</p>
+    <p style=color:red><b>注意：初次使用时需要设置数据库名称，请设置不少于六个字符的名称，避免被其他人通过"切换数据库"命令读取。</b></p>
     <h3><a id="1">会战管理</a></h3>
-    <h4>注：本类功能仅限群聊</h4>
     <table>
         <thead>
             <tr>
@@ -92,7 +99,7 @@
             <tr>
                 <td>SL [@某人] [？]</td>
                 <td>挑战boss强制取消后用，记录本日SL<sup class="footnote">3</sup>，用“？”查询今日是否已 SL<br>
-                如果有at则为代报
+                    如果有at则为代报
                 </td>
             </tr>
             <tr>
@@ -134,12 +141,12 @@
         </tbody>
     </table>
     <p>
-        <sup class="footnote">2</sup>此功能是在日期变更后<b>(游戏中是以凌晨四点(日服)/凌晨五点(国台服)为界)</b>，将出刀记录添加到前一天。例如日服中03:59完成出刀，在04:01时向机器人报刀则需要加上[昨日]<br>
+        <sup
+            class="footnote">2</sup>此功能是在日期变更后<b>(游戏中是以凌晨四点(日服)/凌晨五点(国台服)为界)</b>，将出刀记录添加到前一天。例如日服中03:59完成出刀，在04:01时向机器人报刀则需要加上[昨日]<br>
         <sup class="footnote">3</sup>在公会战面板的“查刀”页中，可以查看所有人今日是否已使用SL<br>
-        <sup class="footnote">4</sup>此功能既可以用于主动结束锁定，也可以用户强制取消他人的解锁。本人或管理员可以随意解锁，3分钟后“出刀”可以被任何人解锁，“锁定”没有时间限制
-    </p>
+        <sup class="footnote">4</sup>此功能既可以用于主动结束锁定，也可以用户强制取消他人的解锁。本人或管理员可以随意解锁，3分钟后“出刀”可以被任何人解锁，“锁定”没有时间限制 </p>
     <h3><a id="2">管理系统</a></h3>
-    <h4>注：群管理员并不会自动获得后台的管理权限，如有需要，请联系维护组更改。</h4>
+    <h4>注：群管理员有时可能不会获得后台的管理权限，如出现此种情况，请联系维护组更改。</h4>
     <table>
         <thead>
             <tr>
@@ -196,15 +203,15 @@
             </tr>
             <tr>
                 <td>日/台/陆rank表</td>
-                <td>查看各服rank推荐表</td> 
+                <td>查看各服rank推荐表</td>
             </tr>
             <tr>
                 <td>黄骑充电表</td>
-                <td>黄骑1动规律</td>    
+                <td>黄骑1动规律</td>
             </tr>
             <tr>
                 <td>谁是xcw</td>
-                <td>角色别称查询</td>    
+                <td>角色别称查询</td>
             </tr>
             <tr>
                 <td>挖矿计算 +当前名次</td>
@@ -215,70 +222,85 @@
                 <td>台服接龙小游戏</td>
             </tr>
             <tr>
+                <td>B/台服新闻</td>
+                <td>显示最新的B/台服新闻</td>
+            </tr>
+            <tr>
                 <td>官漫132</td>
-                <td>阅读指定话(部分有汉化)<br><b>需启用pcr-comic服务</b></td>
+                <td>阅读指定话(汉化更新至200话)<br><b>需启用pcr-comic服务</b></td>
             </tr>
         </tbody>
     </table>
-            <h4>工会排名查询</h4>
-            <h4>需启用clanrank服务</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>关键词</th>
-                        <th>说明</th>
-                    </tr>
-                </thead>
-                <tbody>
+    <h4>公会排名查询</h4>
+    <h4>需启用clanrank-push服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>关键词</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
             <tr>
                 <td>会长排名+会长名</td>
-                <td>查看会长名包含输入名字的工会排名</td>
+                <td>查看会长名包含输入名字的公会排名</td>
             </tr>
             <tr>
-                <td>公会排名+工会名</td>
-                <td>查看公会名包含输入名字的工会排名</td>
+                <td>公会排名+公会名</td>
+                <td>查看公会名包含输入名字的公会排名</td>
             </tr>
             <tr>
                 <td>查看排名+排名</td>
-                <td>查看指定排名的工会分数信息</td>
+                <td>查看指定排名的公会分数信息</td>
             </tr>
             <tr>
                 <td>分数排名+分数</td>
-                <td>查看指定分数的工会排名信息</td>
+                <td>查看指定分数的公会排名信息</td>
             </tr>
-                </tbody>
-            </table>
-        <h4>公主连结维基</h4>
-        <h4>注：默认关闭，请联系维护组开启。</h4>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>关键词</th>
-                    <th>说明</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>查询装备#名称</td>
-                    <td>查看装备信息</td>
-                </tr>
-                <tr>
-                    <td>查询角色#名称</td>
-                    <td>查看角色信息</td>
-                </tr> 
-            </tbody>
-        </table> 
-            <h4>会战报告</h4>
-            <h4>需启用离职报告服务</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>关键词</th>
-                        <th>说明</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <tr>
+                <td>绑定公会+会长ID</td>
+                <td>绑定本群的公会，会长ID指游戏内ID</td>
+            </tr>
+            <tr>
+                <td>公会排名</td>
+                <td>查询本群绑定的公会的排名信息</td>
+            </tr>
+            <tr>
+                <td><b>(自动)</b>公会排名推送</td>
+                <td>每天早5点自动推送本群绑定的公会的排名信息</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>公主连结维基</h4>
+    <h4>注：默认关闭，请联系维护组开启。</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>关键词</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>查询装备#名称</td>
+                <td>查看装备信息</td>
+            </tr>
+            <tr>
+                <td>查询角色#名称</td>
+                <td>查看角色信息</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>会战报告</h4>
+    <h4>需启用离职报告服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>关键词</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
             <tr>
                 <td>生成离职报告</td>
                 <td>生成自己的离职报告</td>
@@ -293,6 +315,7 @@
             </tr>
         </tbody>
     </table>
+    <p style=color:red><b>能成功生成报告需要以下两个先决条件：<br>1.本群创建了公会且您已经加入了公会<br>2.您在系统中有出刀记录<br>不满足以上任何一条则不会有任何回复！！！</b></p>
     <h3>订阅类</h3>
     <table>
         <thead>
@@ -305,32 +328,31 @@
             <tr>
                 <td><b>(自动)</b>日/台/国服背刺时间提醒</td>
                 <td><b>需启用pcr-arena-reminder-jp(日服)或pcr-arena-reminder-tw(国台服)服务</b></td>
-            </tr> 
+            </tr>
             <tr>
                 <td><b>(自动)</b>官方四格漫画更新提示(日文)</td>
                 <td></td>
-            </tr> 
+            </tr>
             <tr>
                 <td><b>(自动)</b>整点报时</td>
                 <td><b>需启用hourcall服务</b></td>
-            </tr> 
+            </tr>
             <tr>
                 <td><b>(自动)</b>新闻推送</td>
                 <td>推送最新的新闻<br><b>需启用pcr-news-bili(B服)或pcr-news-tw(台服)或pcr-twitter(日服，暂时关闭)服务</b></td>
-            </tr> 
+            </tr>
             <tr>
                 <td><b>(自动)</b>提醒买药小助手(国/台服)</td>
                 <td>每天0、6、12、18点提醒买药(UTC+8)<br><b>需启用hourcallyao服务</b></td>
-            </tr> 
+            </tr>
             <tr>
                 <td><b>(自动)</b>提醒买药小助手(日服)</td>
                 <td>每天0、6、12、18点提醒买药(UTC+9)<br><b>需启用hourcallyaojp服务</b></td>
-            </tr> 
+            </tr>
     </table>
     <h2>娱乐及实用类功能</h2>
     <h3><a id="4">抽卡</a></h3>
     <h4>需启用gacha服务</h4>
-    <p>注：如需取消抽卡禁言，直接取消机器人的管理权限即可。</p>
     <table>
         <thead>
             <tr>
@@ -366,6 +388,9 @@
         </tbody>
     </table>
     <p><sup class="footnote">7</sup>一天只能抽一井，如需多抽，请使用氪金命令</p>
+    <h3>抽卡规划器(国服)</h3>
+    <p><a href="https://xcw.pcrbotlink.top/gachaplanning/" target="_blank">点击使用</a></p>
+    <p><b>注：首次加载时间较长，请耐心等待。</b></p>
     <h3>切噜语</h3>
     <h4>需启用pcr-cherugo服务</h4>
     <table>
@@ -400,7 +425,10 @@
                 <td>给主さま盖章章(随机图样哦)</td>
             </tr>
         </tbody>
-    </table>  
+    </table>
+    <h3>哔哩哔哩直播/动态/番剧订阅&查询</h3>
+    <p><b>注：因插件按月收费，故需使用本功能的每月还需额外付2元。如有需要，请联系维护组。</b></p>
+    <P>参考<a href="https://docs.qq.com/doc/DV3JxWmZqS3VGYWtK">帮助</a>，或在群里发送"bili功能"查看指南后使用</P>
     <h3>惠惠的爆裂魔法~</h3>
     <h4>需启用explosion服务</h4>
     <table>
@@ -420,7 +448,7 @@
                 <td>又可以来一发了呢</td>
             </tr>
         </tbody>
-    </table> 
+    </table>
     <h3>生成器</h3>
     <h4>需启用generator服务</h4>
     <table>
@@ -444,12 +472,12 @@
                 <td>使用"记仇 天气/主题"命令生成</td>
             </tr>
             <tr>
-                <td>无中生友</td>
-                <td>使用"我有(一)个朋友想问问/说/想知道/让我帮他问+内容[@某人]"命令生成</br>
-                at某人则使用他的头像，不at则随机选择一个</td>
+                <td><s>无中生友</s></td>
+                <td><s>使用"我有(一)个朋友想问问/说/想知道/让我帮他问+内容[@某人]"命令生成</br>
+                at某人则使用他的头像，不at则随机选择一个</s></td>
             </tr>
         </tbody>
-    </table> 
+    </table>
     <h3>掷骰子</h3>
     <h4>需启用dice服务</h4>
     <table>
@@ -467,6 +495,30 @@
             <tr>
                 <td>.r 3d12</td>
                 <td>掷3次12面骰子</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>我问你答</h3>
+    <h4>需启用QA服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>关键词</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>我问A你答B</td>
+                <td>设置自定义答复(仅对设置人有效)</td>
+            </tr>
+            <tr>
+                <td><b>(管理员)</b>大家问/有人问A你答B</td>
+                <td>设置自定义答复(对所有人有效)</td>
+            </tr>
+            <tr>
+                <td><b>(管理员(仅删除其他人问题时))</b>不要回答+问题回答</td>
+                <td>删除自定义答复</td>
             </tr>
         </tbody>
     </table>
@@ -491,22 +543,6 @@
             </tr>
         </tbody>
     </table>
-    <h3>嘴臭</h3>
-    <h4 style=color:red;font-size:110%>警告：本功能默认关闭。若开启，可能会给某些群友带来不适并且会增大封号的风险，请您谨慎考虑后再联系维护组开启。另外，40人以上群禁用。</h4>
-    <table>
-        <thead>
-            <tr>
-                <th>关键词</th>
-                <th>说明</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><b>(自动)</b>嘴臭</td>
-                <td>机器人会根据你骂它的话做出回应</td>
-            </tr>
-        </tbody>
-    </table>
     <h3>涩图&搜图</h3>
     <table>
         <thead>
@@ -528,12 +564,13 @@
     </table>
     <p>注意事项：</p>
     <p style=color:red;font-size:120%>1.会战期间涩图和搜图功能停用,且40人以上群禁用</p>
-        <p>2.本涩图服务的涩图库<b>并不包含</b>所有的pixiv图片，且<b>中文tag的搜索效果不佳</b>，英文和日文tag为最佳。<br>
-            3.没有R18<br>
+    <p>2.本涩图服务的涩图库<b>并不包含</b>所有的pixiv图片，且<b>中文tag的搜索效果不佳</b>，英文和日文tag为最佳。<br>
+        3.没有R18<br>
         4.一个人一天最多要10份涩图，每要完一次冷却10分钟<br>
-        <b>5.如有偶然的无图片情况，则是qq吞图了</b>
-        <h3>其他杂项功能</h3>
-        <table>
+        <b>5.如有偶然的无图片情况，则是qq吞图了</b><br>
+        <b>6.不会吧不会吧，不会真有人连几秒钟都等不得吧？</b>
+    <h3>其他杂项功能</h3>
+    <table>
         <thead>
             <tr>
                 <th>关键词</th>
@@ -541,26 +578,41 @@
             </tr>
         </thead>
         <tbody>
-            <tbody>
-                <tr>
-                    <td>迫害龙王</td>
-                    <td>字面意思</td>
-                </tr>
-                <tr>
-                    <td>搜无损+名字</td>
-                    <td>搜索无损音乐</td>
-                </tr>
-                <tr>
-                    <td>来杯咖啡+内容</td>
-                    <td><b>(不建议采用此种方法，请直接私聊)</b>向维护组发送反馈信息</td>
-                </tr>
-            </tbody>
-        </table>
-        <h2>联系维护组购买</h2>
-        <p><a href="https://qm.qq.com/cgi-bin/qm/qr?k=3mC62Mz6AoE9AUV9zCxRQtXVX3w0IpmI&noverify=0" target="_blank">请点击此处与维护组联系</a></br>若链接无法打开，请手动添加2144671869为好友</p>
-        <h2>致谢</h2>
-        <p>本bot使用了以下开源或非开源的项目或程序，在此向他们表示感谢：<br>
-            <a href="http://cqp.cc" target="_blank">酷Q</a>、<a href="http://yobot.win/" target="_blank">yobot</a>、<a href="https://github.com/Ice-Cirno/HoshinoBot" target="_blank">HoshinoBot</a></p>
+        <tbody>
+            <tr>
+                <td>迫害龙王</td>
+                <td>字面意思<br><b>需启用longwang服务</b></td>
+            </tr>
+            <tr>
+                <td>搜无损+名字</td>
+                <td>搜索无损音乐<br><b>需启用flac服务</b></td>
+            </tr>
+            <tr>
+                <td>来杯咖啡+内容</td>
+                <td><b>(不建议采用此种方法，请直接私聊)</b>向维护组发送反馈信息</td>
+            </tr>
+            <tr>
+                <td>猜猜我是谁？</td>
+                <td>发送"cygames"来开始游戏吧！<br><b>需启用voiceguess服务</b></td>
+            </tr>
+            <tr>
+                <td>今日运势(vtb版)</td>
+                <td>以下命令均可:抽签、今日人品、今日运势、人品、运势、小狐狸签、吹雪签<br><b>需启用vortune服务</b></td>
+            </tr>
+            <tr>
+                <td>角色正式名称/别名+语音</td>
+                <td>听老婆说话！(小仓唯的语音请使用镜华语音)<br><b>需启用record服务</b></td>
+            </tr>
+            <tr>
+                <td>#查询授权</td>
+                <td>查询小仓唯还有多久到期</b></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>致谢</h2>
+    <p>本bot使用了以下开源或非开源的项目或程序，在此向他们表示感谢：<br>
+        <a href="http://cqp.cc" target="_blank">酷Q</a>、<a href="http://yobot.win/" target="_blank">yobot</a>、<a
+            href="https://github.com/Ice-Cirno/HoshinoBot" target="_blank">HoshinoBot</a>、<a href="https://github.com/Tsuk1ko/CQ-picfinder-robot" target="_blank">CQ-picfinder-robot</a>、以及众多的Hoshino和酷Q插件。</p>
 
 </body>
 
